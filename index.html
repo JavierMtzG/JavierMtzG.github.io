@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,21 +7,146 @@
   <title>Javier Martínez Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hover.css@2.3.1/css/hover-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <style>
+    /* Agregamos un mensaje de bienvenida flotante */
+    .welcome-message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #0099ff;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      display: none;
+      z-index: 1000;
+    }
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      cursor: url('images/cursor.cur'), auto; /* Cambiamos el cursor del ratón */
+      background-color: #0d0d0d; /* Color oscuro de fondo */
+    }
+
+    /* Agregamos estilos para el fondo fluido con partículas */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Estilo para el menú */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: transparent; /* Fondo transparente para que se vea el fondo de partículas */
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      transition: background-color 0.5s ease; /* Transición para el cambio de color de fondo */
+    }
+
+    .header h1 {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      color: #fff;
+      margin: 0;
+    }
+
+    .header nav {
+      display: flex;
+    }
+
+    .header nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header nav ul li {
+      margin: 0 10px;
+    }
+
+    .header nav ul li a {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #fff;
+      text-decoration: none;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .header nav ul li a:hover {
+      color: #0099ff;
+      transform: scale(1.1);
+    }
+
+    /* Estilo para el efecto de agua en el fondo */
+    body::before {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: url('images/agua.png');
+      background-size: cover;
+      pointer-events: none;
+      animation: ripples 20s infinite linear;
+    }
+
+    @keyframes ripples {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+  </style>
 </head>
-<body>
-  <div class="welcome-message">
-    ¡Bienvenido a mi Portfolio de Ingeniero de Telecomunicaciones!
-  </div>
+<body class="bg-gray-900">
+  <!-- Partículas de fondo -->
+  <div id="particles-js" class="fixed inset-0 z-0"></div>
 
-  <div id="particles-js"></div>
+  <!-- Menú de navegación -->
+  <nav class="flex items-center justify-between bg-transparent py-4 px-6 fixed w-full z-10">
+    <h1 class="text-white text-2xl">Portfolio</h1>
+    <ul class="flex space-x-4">
+      <li><a href="index.html" class="text-white hover:text-blue-400">Inicio</a></li>
+      <li><a href="proyectos.html" class="text-white hover:text-blue-400">Proyectos</a></li>
+      <li><a href="contacto.html" class="text-white hover:text-blue-400">Contacto</a></li>
+    </ul>
+  </nav>
 
-  <div class="container">
+  <!-- Contenido del index -->
+  <div class="container mx-auto py-16">
     <!-- Contenido existente -->
   </div>
 
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="js/index.js" defer></script>
+  <!-- Scripts al final del body -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    // Configuración de partículas
+    particlesJS("particles-js", {
+      // Configuración de partículas
+    });
+
+    // Cambiar el color de fondo del menú al hacer scroll
+    $(document).scroll(function() {
+      var scrollPosition = $(this).scrollTop();
+      if (scrollPosition > 100) {
+        $("nav").addClass("bg-gray-900");
+      } else {
+        $("nav").removeClass("bg-gray-900");
+      }
+    });
+  </script>
 </body>
 </html>
