@@ -4,182 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto - Javier Martínez Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hover.css@2.3.1/css/hover-min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-    }
-
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .contact-section {
-      text-align: center;
-      padding: 50px;
-    }
-
-    .contact-section img {
-      width: 100px; /* Ajusta el tamaño según tus necesidades */
-      border-radius: 50%;
-      margin: 20px;
-    }
-
-    .contact-section p {
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      color: #333333;
-      line-height: 1.5;
-    }
-
-    .contact-section ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px;
-    }
-
-    .contact-section ul li {
-      display: inline-block;
-      margin: 0 10px;
-    }
-
-    .contact-section a img {
-      width: 40px; /* Ajusta el tamaño según tus necesidades */
-    }
-
-    .contact-form {
-      margin-top: 30px;
-      text-align: left;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .contact-form button {
-      background-color: #0099ff;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .contact-form button:hover {
-      background-color: #0077cc;
-    }
-
-    .section-title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 30px;
-    }
-
-    .section-content {
-      text-align: left;
-      margin-top: 10px;
-    }
-  </style>
+  <title>Contacto</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite/css/flowbite.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900">
-  <!-- Partículas de fondo -->
-  <div id="particles-js" class="fixed inset-0 z-0"></div>
-
-  <!-- Menú de navegación -->
-  <nav class="flex items-center justify-between bg-transparent py-4 px-6 fixed w-full z-10">
-    <h1 class="text-white text-2xl">Portfolio</h1>
-    <ul class="flex space-x-4">
-      <li><a href="index.html" class="text-white hover:text-blue-400">Inicio</a></li>
-      <li><a href="proyectos.html" class="text-white hover:text-blue-400">Proyectos</a></li>
-      <li><a href="contacto.html" class="text-white hover:text-blue-400">Contacto</a></li>
-    </ul>
-  </nav>
-
-  <!-- Contenido de la página de contacto -->
-  <div class="container mx-auto py-16">
-    <div class="contact-section">
-      <h2>¡Hola! Soy Javier Martínez García</h2>
-      <p>Un ingeniero de telecomunicaciones apasionado por la tecnología y el desarrollo de software. Bienvenido a mi página de contacto.</p>
-
-      <!-- Foto -->
-      <img src="/images/cv_image.png" alt="Mi Foto">
-
-      <!-- Logos y enlaces -->
-      <ul>
-        <li><a href="https://www.linkedin.com/in/javier-mtz-garcia/" target="_blank"><img src="/images/174857.png" alt="LinkedIn"></a></li>
-        <li><a href="https://github.com/JavierMtzG" target="_blank"><img src="/images/25231.png" alt="GitHub"></a></li>
-      </ul>
-
-      <!-- Secciones adicionales -->
-      <div class="section-title">Historial Estudiantil</div>
-      <div class="section-content">
-        <!-- Agrega información sobre tu historial estudiantil aquí -->
-        Graduado en Ingeniería de Telecomunicaciones en la Universidad de Alcalá de Henares.
+<body class="bg-gray-100">
+  <nav class="bg-blue-500 p-4">
+    <div class="flex items-center justify-between">
+      <div>
+        <a href="#" class="text-white font-bold">Inicio</a>
       </div>
-
-      <div class="section-title">Experiencia de Trabajo</div>
-      <div class="section-content">
-        <!-- Agrega información sobre tu experiencia de trabajo aquí -->
-        Profesor Particular de ámbito Tecnológico en nivel de Educación Secundaria, Bachillerato y Universidad.
-        He sido Progesor de Matemáticas, Gramática Española, Inglés, Programación en C, Ciberseguridad...
-      </div>
-
-      <div class="section-title">Idiomas</div>
-      <div class="section-content">
-        <!-- Agrega información sobre los idiomas que hablas aquí -->
-        Español (nativo), Inglés (avanzado), Francés (intermedio).
-      </div>
-
-      <div class="section-title">Presentación</div>
-      <div class="section-content">
-        <!-- Agrega una breve presentación sobre ti aquí -->
-        ¡Gracias por visitar mi página! Soy apasionado por la tecnología y siempre estoy buscando nuevas oportunidades para aprender y crecer en el campo de las telecomunicaciones y el desarrollo de software.
-      </div>
-
-      <!-- Formulario de contacto mejorado con medidas de seguridad -->
-      <div class="section-title">Contáctame</div>
-      <div class="contact-form">
-        <form action="mailto:javier.mg29@gmail.com" method="post" enctype="text/plain">
-          <label for="name">Nombre:</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="message">Mensaje:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-
-          <button type="submit">Enviar Mensaje</button>
-        </form>
+      <div>
+        <a href="#" class="text-white mx-4">Proyectos</a>
+        <a href="#" class="text-white">Contacto</a>
       </div>
     </div>
-  </div>
-
-  <!-- Scripts al final del body -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script>
-    // Configuración de partículas
-    particlesJS("particles-js", {
-      // Configuración de partículas
-    });
-  </script>
-</body>
-</html> <div class="container">
+  </nav>
+  <div class="container mx-auto py-8">
+    <h1 class="text-3xl font-bold mb-4">Contacto</h1>
+    <p class="text-gray-700">
+      Soy Javier Martínez, estudiante de Ingeniería de Telecomunicaciones de la Universidad de Alcalá de Henares. 
+      Como experiencia he sido profesor particular de matemáticas, gramática española, inglés, física y química, dibujo técnico y programación avanzada en C. 
+      Además, he sido voluntario de la Federación Española de Baloncesto.
+    </p>
+    <p class="text-gray-700 mb-4">
+      Puedes contactarme por correo a <a href="mailto:javier.mgarcia29@gmail.com" class="text-blue-500">javier.mgarcia29@gmail.com</a>.
+    </p>
+    <a href="https://github.com/JavierMtzG" class="inline-block mr-4"><img src="images/25231.png" alt="GitHub" class="w-8 h-8"></a>
+    <a href="https://www.linkedin.com/in/javier-mtz-garcia/" class="inline
